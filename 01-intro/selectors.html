@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hey!</title>
+	<style>
+		* {
+			color: royalblue;
+		}
+
+		p {
+			color: crimson;
+		}
+
+		div {
+			&#promotions {
+				p {
+					em {
+						&.highlight#october {
+							color: teal !important;
+						}
+					}
+				}
+			}
+
+			p {
+				color: green;
+			}
+		}
+
+		p.promo {
+			color: purple;
+		}
+
+		p#special-offer {
+			color: magenta;
+		}
+
+		div {
+			span {
+				color: green;
+			}
+		}
+
+		div {
+			p {
+				color: red;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<p>
+			<span>
+				Bacalhau
+			</span>
+		</p>
+	</div>
+	<div>
+		<p>
+			<span>
+				Pastel de nata
+			</span>
+		</p>
+	</div>
+
+
+	<div id="promotions">
+		<p>
+			<em class="highlight" id="october" style="color: navy !important;">
+				Hello!
+			</em>
+		</p>
+	</div>
+	<div>
+		<p>This is a paragraph</p>
+		<p class="promo">This is a paragraph</p>
+		<p class="promo" id="special-offer">Hey! Francesinha for €1!</p>
+	</div>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<h1>This is an H1</h1>
+	<div>this is a DIV</div>
+</body>
+</html>
