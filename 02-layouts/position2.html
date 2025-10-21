@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS positioning</title>
+	<style>
+		div {
+			position: absolute;
+			top: 100px;
+			right: 100px;
+			left: 100px;
+			width: 100px;
+			background-color: red;
+		}
+		section {
+			outline: 2px solid green;
+			padding: 10px;
+			margin: 10px;
+			min-height: 200px;
+			&[style] {
+				background-color: gold;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<section style="position: relative;">
+			<section>
+				<section>
+					<section>
+						<div>DIV</div>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+</body>
+</html>

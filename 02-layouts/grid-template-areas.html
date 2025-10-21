@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<style>
+		html {
+			padding: 0;
+			margin: 0;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			padding: 0;
+			margin: 0;
+			height: 100vh;
+
+			>* { outline: 1px solid red; }
+
+			display: grid;
+			grid-template-rows: 100px 30px 200px 1fr 120px;
+			grid-template-columns: clamp(100px, 15vw, 200px) 1fr 200px;
+			gap: 5px;
+
+			grid-template-areas:
+			" footer    footer     footer "
+			" header    header     header "
+			"site-nav  site-nav    adverts"
+			"page-nav    main      adverts"
+			"page-nav    main     comments";
+
+			@media(width < 600px) {
+				background-color: green;
+				width: 100vw;
+
+				grid-template-rows: 100px 30px 200px 1fr 120px 0 0;
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					" header "
+					"site-nav "
+					" main "
+					"page-nav"
+					"footer"
+					"adverts"
+					"comments"
+					;
+			}
+
+
+			header { grid-area: header; }
+			nav#site-nav { grid-area: site-nav; }
+			nav#page-nav { grid-area: page-nav; }
+			main { grid-area: main; }
+			aside#comments { grid-area: comments; }
+			aside#adverts { grid-area: adverts; }
+			footer { grid-area: footer; }
+
+			>* {
+				background-color: silver;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: Consolas, 'Courier New', Courier, monospace;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>NDC Porto</h1>
+	</header>
+	<nav id="site-nav">
+		<ul>
+			<li>
+				<a href="#">Home</a>
+				<a href="#">About Us</a>
+				<a href="#">Contact Us</a>
+			</li>
+		</ul>
+	</nav>
+	<nav id="page-nav">
+		<ul>
+			<li>
+				<a href="#">Guitars</a>
+				<a href="#">Basses</a>
+				<a href="#">Drums</a>
+			</li>
+		</ul>
+	</nav>
+	<main>
+		<section>
+			<h1>Guitars</h1>
+			<p>Guitars are versatile stringed instruments used across many musical
+				styles. They can provide melody, harmony, and rhythm, and range from
+				warm acoustic tones to bright, distorted electric sounds—making them a
+				staple for soloists and bands alike.</p>
+		</section>
+		Content goes here
+	</main>
+	<aside id="adverts">
+		adverts go here
+	</aside>
+	<aside id="comments">
+		comments go here
+	</aside>
+	<footer>
+		copyright, links, about us, etc.
+	</footer>
+</body>
+</html>

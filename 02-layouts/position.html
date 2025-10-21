@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS positioning</title>
+	<style>
+		* { box-sizing: border-box; }
+		p {
+			border: 2px solid blue;
+			&:nth-child(2) {
+				text-decoration: underline;
+				position: relative;
+				left: 100px;
+				top: 100px;
+			}
+			&:nth-child(3), input[type=submit] {
+				position: absolute;
+				background-color: red;
+				right: 40px;
+				bottom: 80px;
+			}
+		}
+	</style>
+  </head>
+  <body>
+	<p style="position: relative; height: 200px;">This is a paragraph
+		<input type="submit">
+	</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+	<p>This is a paragraph</p>
+
+  </body>
+</html>
