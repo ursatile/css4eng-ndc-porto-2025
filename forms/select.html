@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<style>
+		/* Opt in to stylable select elements
+		https://open-ui.org/components/customizableselect/#opting-in-to-the-new-behavior
+		*/
+		select,
+		::picker(select) {
+			appearance: base-select;
+			width: 24em;
+		}
+
+		::picker(select) {
+			background-color: gold;
+			color: black;
+			border: 2px solid royalblue;
+			border-radius: 0 0 4px 4px;
+		}
+
+		select {
+			border: 2px solid royalblue;
+			background-color: gold;
+			border-radius: 4px;
+			&:open {
+				border-radius: 4px 4px 0 0;
+				border-bottom: none;
+				&::picker-icon {
+					transform: rotateX(180deg);
+				}
+			}
+
+			&::picker-icon {
+				transition: all 0.5s;
+				color: red;
+			}
+
+			option::checkmark {
+				content: '>';
+			}
+
+
+		}
+	</style>
+</head>
+<body>
+	<select name="best-album">
+		<button>
+			YOU CHOSE
+			<selectedcontent></selectedcontent>
+		</button>
+		<option value="dark-side">The Dark Side of the Moon - Pink Floyd</option>
+		<option value="led-zeppelin-iv">Led Zeppelin IV</option>
+		<option value="abbey-road">Abbey Road - The Beatles</option>
+		<option value="rumours">Rumours - Fleetwood Mac</option>
+		<option value="the-wall">The Wall - Pink Floyd</option>
+		<option value="hotel-california">Hotel California - Eagles</option>
+		<option value="back-in-black">Back in Black - AC/DC</option>
+		<option value="thriller">Thriller - Michael Jackson</option>
+		<option value="born-to-run">Born to Run - Bruce Springsteen</option>
+		<option value="london-calling">London Calling - The Clash</option>
+		<option value="who-next">Who's Next - The Who</option>
+		<option value="appetite">Appetite for Destruction - Guns N' Roses</option>
+		<option value="nevermind">Nevermind - Nirvana</option>
+		<option value="sgt-pepper">Sgt. Pepper's Lonely Hearts Club Band - The
+			Beatles</option>
+		<option value="physical-graffiti">Physical Graffiti - Led Zeppelin</option>
+		<option value="highway-61">Highway 61 Revisited - Bob Dylan</option>
+		<option value="boston">Boston - Boston</option>
+		<option value="paranoid">Paranoid - Black Sabbath</option>
+		<option value="american-beauty">American Beauty - Grateful Dead</option>
+		<option value="exile">Exile on Main St. - The Rolling Stones</option>
+	</select>
+
+</body>
+</html>
