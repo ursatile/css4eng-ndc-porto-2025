@@ -15,13 +15,14 @@
 			padding: 4px;
 		}
 		input[type=radio], input[type=checkbox] {
-			appearance: none;
+			appearance: none; /* this will allow us to get away of browser default style */
 			background-color: #DDDDDD;
 			width: 32px;
 			height: 16px;
 			position: relative;
 			top: 2px;
 			border-radius: 16px;
+			transition: all 500ms;
 			&:checked {
 				background-color: green;
 				&::after {
@@ -29,6 +30,8 @@
 				}
 			}
 			&::after {
+
+				transition: all 500ms;
 				position: absolute;
 				display: block;
 				content: ' ';
