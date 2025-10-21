@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<style>
+		@keyframes invalid-wobble {
+			0% {
+				transform: rotate(10deg);
+				background-color: white;
+			}
+
+			10% { transform: rotate(-9deg); }
+
+			20% {
+				transform: rotate(+8deg);
+				background-color: red;
+			}
+
+			30% { transform: rotate(-7deg); }
+			40% { transform: rotate(+6deg); }
+			50% { transform: rotate(-5deg); }
+			60% { transform: rotate(+4deg); }
+			70% { transform: rotate(-3deg); }
+			80% { transform: rotate(+2deg); }
+			90% { transform: rotate(-1deg); }
+
+			100% {
+				transform: rotate(0);
+				background-color: white;
+				border-color: red;
+			}
+		}
+
+		input {
+			width: 200px;
+			appearance: none;
+			border-radius: 8px;
+			border: 1px solid black;
+			&:focus {
+				outline: 0;
+			}
+
+
+			&:user-invalid {
+				animation-name: invalid-wobble;
+				animation-fill-mode: forwards;
+				animation-duration: 1s;
+				transform-origin: center 0px;
+			}
+		}
+
+		body { text-align: center; }
+
+	</style>
+</head>
+<body>
+	<div>
+		<form action="#" method="post">
+			<input type="email" required>
+		</form>
+	</div>
+</body>
+</html>

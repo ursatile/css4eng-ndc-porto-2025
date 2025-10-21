@@ -1,9 +1,10 @@
 - variables (and applying them to components)
 - CSS functions (existing / inbuilt)
-- backgrounds & composition
+- backgrounds & composition X
+- custom validation and pseudoclasses
 - transitions
 - animations
+-
 - styling form elements
-- custom validation and pseudoclasses
 - CSS functions (custom)
 - scoping CSS

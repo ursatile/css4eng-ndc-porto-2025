@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<style>
+		* { box-sizing: border-box; margin: 0; padding: 0; }
+		:root{
+			--switch-button-border-radius: 50%;
+		}
+		label {
+			display: block;
+			padding: 4px;
+		}
+		input[type=radio], input[type=checkbox] {
+			appearance: none;
+			background-color: #DDDDDD;
+			width: 32px;
+			height: 16px;
+			position: relative;
+			top: 2px;
+			border-radius: 16px;
+			&:checked {
+				background-color: green;
+				&::after {
+					transform: translate(16px);
+				}
+			}
+			&::after {
+				position: absolute;
+				display: block;
+				content: ' ';
+				width: 10px;
+				height: 10px;
+				top: 3px;
+				left:2px;
+				background-color: white;
+				border-radius: var(--switch-button-border-radius);
+			}
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<label>
+				<input type="radio" name="pizza-base" value="thin">
+				Thin crust
+			</label>
+			<label>
+				<input type="radio" name="pizza-base" value="deep">
+				Deep Dish
+			</label>
+			<label>
+				<input type="radio" name="pizza-base" value="stuffed-crust">
+				Stuffed Crust
+			</label>
+		</fieldset>
+		<fieldset>
+			<label>
+				<input type="checkbox" name="toppings" value="pepperoni">
+				Pepperoni
+			</label>
+			<label>
+				<input type="checkbox" name="toppings" value="mushrooms">
+				Mushrooms
+			</label>
+			<label>
+				<input type="checkbox" name="toppings" value="olives">
+				Olives
+			</label>
+			<label>
+				<input type="checkbox" name="toppings" value="onions">
+				Onions
+			</label>
+			<label>
+				<input type="checkbox" name="toppings" value="peppers">
+				Peppers
+			</label>
+			<label>
+				<input type="checkbox" name="toppings" value="extra-cheese">
+				Extra Cheese
+			</label>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<style>
+		@keyframes hey-look-at-me-bounce {
+			from {
+				width: 220px;
+			}
+			to {
+				width: 200px;
+			}
+		}
+
+
+		input {
+			width: 200px;
+			appearance: none;
+			border-radius: 8px;
+			border: 2px solid black;
+			&:user-invalid {
+				animation-name: hey-look-at-me-bounce;
+				animation-duration: 0.2s;
+				border-color: red;
+				transition: all 0.5s;
+			 }
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="#" method="post">
+			<input type="email" required>
+		</form>
+	</div>
+</body>
+</html>
