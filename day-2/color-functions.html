@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+	<style>
+		:root {
+			--main-bg: white;
+			--main-fg: black;
+			--message-base-color: #0ff;
+			--font-family: "Impact";
+		}
+		html {
+			background-color: var(--main-bg);
+			color: var(--main-fg);
+			font-family: var(--font-family);
+			font-size: clamp(10px, 5vw, 40px);
+		}
+
+		div {
+			color: hsl(from var(--message-base-color) 0 0 calc(100 - l));
+			width: clamp(200px, 100vh, 600px);
+		}
+
+		div.generic {
+
+			background-color: var(--message-base-color);
+		}
+		div.success {
+			background-color: hsl(from var(--message-base-color) 90deg s l);
+		}
+		div.warning {
+			background-color: hsl(from var(--message-base-color) 30deg s l);
+		}
+		div.failure {
+			background-color: hsl(from var(--message-base-color) 0deg s l);
+		}
+		div {
+			margin: 5px;
+			padding: 5px;
+		}
+	</style>
+  </head>
+  <body>
+	<div class="generic">hey, that worked!</div>
+	<div class="success">hey, that worked!</div>
+	<div class="warning">that might have gone wrong...?</div>
+	<div class="failure">yeah, that failed badly.</div>
+
+
+  </body>
+</html>

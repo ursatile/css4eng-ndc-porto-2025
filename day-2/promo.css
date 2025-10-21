@@ -1,0 +1,41 @@
+		* { box-sizing: border-box; }
+		html { font-family: roboto, arial, helvetica, sans-serif; }
+
+		div.promo-code {
+			margin-bottom: 0.5rem;
+			display: inine-block;
+			width: 20em;
+			height: 1.4em;
+			position: relative;
+
+			label {
+				position: relative;
+				top: 2px;
+			}
+
+			input {
+				height: 1.8em;
+
+				&[type=text] {
+					position: absolute;
+					margin-right: 0;
+					left: 4em;
+					right: 6em;
+					border: 2px solid var(--accent-bg-color);
+					border-radius: var(--border-radius) 0 0 var(--border-radius);
+				}
+
+				&[type=submit] {
+					appearance: none;
+					border: 0;
+					background-color: var(--accent-bg-color);
+					color: var(accent-fg-color);
+
+					border-radius: 0 var(--border-radius) var(--border-radius) 0;
+					position: absolute;
+					right: 0em;
+					width: 6em;
+
+				}
+			}
+		}
