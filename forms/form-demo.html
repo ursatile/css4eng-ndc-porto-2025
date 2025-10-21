@@ -12,7 +12,15 @@
 		}
 		label {
 			display: block;
-			padding: 4px;
+			padding: 2px 4px;
+			border: 2px solid black;
+			margin: 4px 0;
+			border-radius: 20px;
+			&:has(input:checked) {
+				/* Style a parent element based on
+				matching a child element */
+				background-color: gold;
+			}
 		}
 		input[type=radio], input[type=checkbox] {
 			appearance: none; /* this will allow us to get away of browser default style */
@@ -24,7 +32,7 @@
 			border-radius: 16px;
 			transition: all 500ms;
 			&:checked {
-				background-color: green;
+				background-color: crimson;
 				&::after {
 					transform: translate(16px);
 				}
